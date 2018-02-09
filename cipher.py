@@ -3,10 +3,11 @@ plaintext = input("Input text: ")
 key = int(input("key (0 - 25): "))
 ciphertext = ""
 
+"".join(plaintext.split())
+plaintext = plaintext.lower()
+
 assert key < 26 and key >= 0, "Key is invalid"
 assert plaintext.isalpha() == True, "Only letters please"
-
-plaintext = plaintext.lower().strip
 
 for i in plaintext:
 	tmp = ord(i) + key
