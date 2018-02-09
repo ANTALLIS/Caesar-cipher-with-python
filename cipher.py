@@ -6,7 +6,7 @@ ciphertext = ""
 assert key < 26 and key >= 0, "Key is invalid"
 assert plaintext.isalpha() == True, "Only letters please"
 
-plaintext = plaintext.lower()
+plaintext = plaintext.lower().strip
 
 for i in plaintext:
 	tmp = ord(i) + key
